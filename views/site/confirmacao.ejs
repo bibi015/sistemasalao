@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Solicitação recebida | Lume</title><link rel="stylesheet" href="/css/styles.css"></head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topbar"><div class="shell"><span>Beleza com tempo, cuidado e intenção.</span><span>Ter–Sáb: 9h às 19h</span></div></div>
+  <header class="site-header"><div class="shell nav"><a class="brand" href="/site"><span class="brand-mark">L</span><span class="brand-copy"><strong>Lume</strong><small>salão & beleza</small></span></a><nav class="nav-links" aria-label="Navegação principal"><a href="/site">Início</a><a href="/site/servicos">Serviços</a><a href="/site/profissionais">Profissionais</a><a href="/site/pacotes">Pacotes</a><a href="/site/agendar">Agendar</a></nav></div></header>
+  <main id="conteudo">
+    <section class="page-hero"><div class="shell"><span class="eyebrow">Tudo certo</span><h1>Solicitação <em>recebida.</em></h1><p>Obrigada, <strong><%= dados.nome || 'cliente' %></strong>! Recebemos os dados informados abaixo. A equipe deverá entrar em contato para confirmar a disponibilidade.</p>
+      <div class="booking-summary">
+        <p><strong>Telefone:</strong> <%= dados.telefone || '—' %></p>
+        <p><strong>Procedimento:</strong> <%= dados.procedimento || '—' %></p>
+        <p><strong>Profissional:</strong> <%= dados.profissional || '—' %></p>
+        <p><strong>Data:</strong> <%= dados.data || '—' %></p>
+        <p><strong>Horário:</strong> <%= dados.horario || '—' %></p>
+        <p><strong>Pagamento:</strong> <%= dados.pagamento || '—' %></p>
+        <% if (dados.observacoes) { %><p><strong>Observações:</strong> <%= dados.observacoes %></p><% } %>
+      </div><p><a class="button button-primary" href="/site">Voltar ao início</a></p></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><div><a class="brand" href="/site"><span class="brand-mark">L</span><span class="brand-copy"><strong>Lume</strong><small>salão & beleza</small></span></a><p class="footer-intro">Um espaço feito para você se cuidar, respirar e florescer.</p></div><div><h3>Explore</h3><a href="/site/servicos">Serviços</a><a href="/site/profissionais">Profissionais</a><a href="/site/pacotes">Pacotes</a></div><div><h3>Atendimento</h3><p>Ter–Sáb: 9h às 19h</p><p>(11) 99999-1234</p></div><div><h3>Onde estamos</h3><p>Rua das Flores, 128<br>Jardins · São Paulo</p></div></div><div class="shell footer-bottom"><span>© 2026 Lume Salão & Beleza</span><span>Feito com cuidado para você.</span></div></footer>
+</body>
+</html>

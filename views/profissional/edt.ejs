@@ -1,0 +1,9 @@
+<%- include('../cabecalho.ejs') %>
+<h1>Editar Profissional</h1>
+<a href="/profissional/lst">Voltar para lista</a><br><br>
+<form method="post" action="/profissional/edt/<%= Profissional._id %>">
+<label>Nome:</label><input type="text" name="nome" value="<%= Profissional.nome %>" required><br><br>
+<label>Especialidade:</label><input type="text" name="especialidade" value="<%= Profissional.especialidade %>" required><br><br>
+<label>Clientes:</label><% clientes.forEach(cliente => { const selecionado = Profissional.clientes.some(item => item.toString() === cliente._id.toString()); %><div><input type="checkbox" name="clientes" value="<%= cliente._id %>" <%= selecionado ? 'checked' : '' %>><label><%= cliente.nome %></label></div><% }) %><br>
+<button type="submit">Salvar alterações</button></form>
+<%- include('../rodape.ejs') %>

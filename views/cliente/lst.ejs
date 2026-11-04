@@ -1,0 +1,8 @@
+<%- include('../cabecalho.ejs') %>
+<h1>Clientes</h1>
+<form action="/cliente/lst" method="post"><input type="text" name="filtro" placeholder="Pesquisar cliente"><button type="submit">Pesquisar</button></form><br>
+<a href="/cliente/add">+ Novo Cliente</a><br><br>
+<table border="1"><tr><th>Foto</th><th>Nome</th><th>Data de nascimento</th><th>Telefone</th><th>Ações</th></tr>
+<% for (const cliente of Clientes) { %><tr><td><% if (cliente.foto) { %><img src="<%= cliente.foto %>" width="100" height="100"><% } else { %>Sem foto<% } %></td><td><%= cliente.nome %></td><td><%= cliente.dataNasc.toISOString().split('T')[0] %></td><td><%= cliente.telefone %></td><td><a href="/cliente/edt/<%= cliente._id %>">Editar</a> | <a href="/cliente/del/<%= cliente._id %>">Excluir</a></td></tr><% } %>
+</table>
+<%- include('../rodape.ejs') %>

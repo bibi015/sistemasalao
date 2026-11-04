@@ -1,0 +1,8 @@
+<%- include('../cabecalho.ejs') %>
+<h1>Profissionais</h1>
+<form action="/profissional/lst" method="post"><input type="text" name="filtro" placeholder="Pesquisar profissional"><button type="submit">Pesquisar</button></form><br>
+<a href="/profissional/add">+ Novo Profissional</a><br><br>
+<table border="1"><tr><th>Nome</th><th>Especialidade</th><th>Clientes</th><th>Ações</th></tr>
+<% for (const profissional of Profissionais) { %><tr><td><%= profissional.nome %></td><td><%= profissional.especialidade %></td><td><% if (!profissional.clientes.length) { %>Nenhum cliente<% } else { profissional.clientes.forEach(cliente => { %><div><%= cliente.nome %></div><% }) } %></td><td><a href="/profissional/edt/<%= profissional._id %>">Editar</a> | <a href="/profissional/del/<%= profissional._id %>">Excluir</a></td></tr><% } %>
+</table>
+<%- include('../rodape.ejs') %>

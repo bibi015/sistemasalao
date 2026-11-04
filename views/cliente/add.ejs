@@ -1,0 +1,10 @@
+<%- include('../cabecalho.ejs') %>
+<h1>Cadastrar Cliente</h1>
+<a href="/cliente/lst">Voltar para lista</a><br><br>
+<form action="/cliente/add" method="post" enctype="multipart/form-data">
+<label>Nome:</label><input type="text" name="nome" required><br><br>
+<label>Data de nascimento:</label><input type="date" name="dataNasc" required><br><br>
+<label>Telefone:</label><input type="tel" name="telefone" required><br><br>
+<label>Foto:</label><input type="file" name="foto" accept="image/*"><br><br>
+<button type="submit">Cadastrar</button></form>
+<%- include('../rodape.ejs') %>

@@ -1,0 +1,14 @@
+import express from 'express';
+import multer from 'multer';
+import ClienteController from '../controllers/ClienteController.js';
+const router = express.Router();
+const controle = new ClienteController();
+const upload = multer({ storage: multer.memoryStorage() });
+router.get('/cliente/add', controle.openAdd);
+router.post('/cliente/add', upload.single('foto'), controle.add);
+router.get('/cliente/lst', controle.list);
+router.post('/cliente/lst', controle.find);
+router.get('/cliente/edt/:id', controle.openEdt);
+router.post('/cliente/edt/:id', upload.single('foto'), controle.edt);
+router.get('/cliente/del/:id', controle.del);
+export default router;

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Solicite um agendamento no Lume Salão & Beleza."><title>Agendar | Lume</title><link rel="stylesheet" href="/css/styles.css"></head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="topbar"><div class="shell"><span>Beleza com tempo, cuidado e intenção.</span><span>Ter–Sáb: 9h às 19h</span></div></div>
+  <header class="site-header"><div class="shell nav"><a class="brand" href="/site"><span class="brand-mark">L</span><span class="brand-copy"><strong>Lume</strong><small>salão & beleza</small></span></a><nav class="nav-links" aria-label="Navegação principal"><a href="/site">Início</a><a href="/site/servicos">Serviços</a><a href="/site/profissionais">Profissionais</a><a href="/site/pacotes">Pacotes</a><a href="/site/agendar" aria-current="page">Agendar</a></nav><a class="button button-primary header-cta" href="#formulario">Preencher dados</a></div></header>
+  <main id="conteudo">
+    <section class="page-hero"><div class="shell"><span class="eyebrow">Reserve seu momento</span><h1>Vamos cuidar de <em>você?</em></h1><p>Escolha o serviço, a profissional e o melhor horário. Entraremos em contato para confirmar.</p></div></section>
+    <section class="section"><div class="shell booking-layout">
+      <aside class="booking-aside"><h2>Como funciona</h2><p>Preencha seus dados e preferências. Nossa equipe confirmará a disponibilidade pelo telefone informado.</p><ol><li>Escolha o procedimento</li><li>Informe a data e o horário</li><li>Deixe seus dados de contato</li><li>Aguarde a confirmação</li></ol><p><strong>Dúvidas?</strong><br>(11) 99999-1234</p></aside>
+      <form class="booking-form" id="formulario" action="/site/confirmacao" method="get">
+        <h2>Seu agendamento</h2><p>Todos os campos marcados são necessários.</p>
+        <div class="form-grid">
+          <label>Nome completo<input type="text" name="nome" autocomplete="name" required></label>
+          <label>Telefone<input type="tel" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+          <label>Procedimento<select name="procedimento" required><option value="">Selecione</option><option>Corte + finalização</option><option>Escova modelada</option><option>Manicure completa</option><option>Alongamento em gel</option><option>Design de sobrancelhas</option><option>Extensão fio a fio</option><option>Maquiagem social</option><option>Hidra gloss lips</option></select></label>
+          <label>Profissional<select name="profissional" required><option value="">Selecione</option><option>Marina Alves</option><option>Camila Rocha</option><option>Ana Beatriz</option><option>Luísa Mendes</option></select></label>
+          <label>Data desejada<input type="date" name="data" required></label>
+          <label>Horário desejado<select name="horario" required><option value="">Selecione</option><option>09:00</option><option>10:30</option><option>12:00</option><option>14:00</option><option>15:30</option><option>17:00</option><option>18:30</option></select></label>
+          <label class="full">Forma de pagamento<select name="pagamento" required><option>Pix</option><option>Cartão de crédito</option><option>Cartão de débito</option><option>Dinheiro</option></select></label>
+          <label class="full">Observações<textarea name="observacoes" placeholder="Conte algo que devemos saber antes do atendimento."></textarea></label>
+        </div>
+        <button class="button button-primary" type="submit">Solicitar agendamento</button>
+        <p class="notice">Ao enviar, você concorda em receber o contato do salão para confirmação. Sua solicitação será exibida na próxima tela. A confirmação do horário deve ser feita pela equipe do salão.</p>
+      </form>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><div><a class="brand" href="/site"><span class="brand-mark">L</span><span class="brand-copy"><strong>Lume</strong><small>salão & beleza</small></span></a><p class="footer-intro">Um espaço feito para você se cuidar, respirar e florescer.</p></div><div><h3>Explore</h3><a href="/site/servicos">Serviços</a><a href="/site/profissionais">Profissionais</a><a href="/site/pacotes">Pacotes</a></div><div><h3>Atendimento</h3><p>Ter–Sáb: 9h às 19h</p><p>(11) 99999-1234</p></div><div><h3>Onde estamos</h3><p>Rua das Flores, 128<br>Jardins · São Paulo</p></div></div><div class="shell footer-bottom"><span>© 2026 Lume Salão & Beleza</span><span>Feito com cuidado para você.</span></div></footer>
+</body>
+</html>

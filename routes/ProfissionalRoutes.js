@@ -1,0 +1,12 @@
+import express from 'express';
+import ProfissionalController from '../controllers/ProfissionalController.js';
+const router = express.Router();
+const controle = new ProfissionalController();
+router.get('/profissional/add', controle.openAdd);
+router.post('/profissional/add', controle.add);
+router.get('/profissional/lst', controle.list);
+router.post('/profissional/lst', controle.find);
+router.get('/profissional/edt/:id', controle.openEdt);
+router.post('/profissional/edt/:id', controle.edt);
+router.get('/profissional/del/:id', controle.del);
+export default router;
