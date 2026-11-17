@@ -1,13 +1,13 @@
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { conectarBanco } from './config/conexao.js';
+//import { conexao } from './config/conexao.js';  
 import routes from './routes/route.js';
 import ClienteRoutes from './routes/ClienteRoutes.js';
 import ProfissionalRoutes from './routes/ProfissionalRoutes.js';
 import SiteRoutes from './routes/SiteRoutes.js';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -29,7 +29,6 @@ app.use((err, req, res, next) => {
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
-    conectarBanco().catch((erro) => console.error('Não foi possível conectar ao MongoDB:', erro.message));
 });
 
 export default app;

@@ -21,6 +21,6 @@
 
 ## Banco de dados
 
-O site público e a navegação funcionam sem configurar o banco. As funções administrativas de cadastrar, listar, editar e excluir clientes/profissionais precisam de uma conexão válida do MongoDB Atlas no arquivo `.env`.
+O site público e a navegação funcionam sem configurar o banco. As funções administrativas de cadastrar, listar, editar e excluir clientes/profissionais precisam de uma conexão válida do MongoDB Atlas no arquivo `.env`. Os profissionais cadastrados aparecem nas páginas `/site` e `/site/profissionais` e na opção de profissional do formulário de agendamento. Os dados pessoais dos clientes não são exibidos no site público.
 
 O formulário de agendamento apresenta os dados na tela de confirmação, mas ainda não grava agendamentos no banco de dados.
